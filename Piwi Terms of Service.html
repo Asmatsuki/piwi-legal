@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — Piwi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0a060e;
+      --ink-2: #161318;
+      --ink-3: #242228;
+      --text: #1a1520;
+      --text-secondary: rgba(10,6,14,0.65);
+      --text-muted: rgba(10,6,14,0.45);
+      --lime: #C6F135;
+      --lime-dim: rgba(198, 241, 53, 0.12);
+      --lime-border: rgba(198, 241, 53, 0.25);
+      --surface: #f8f7fa;
+      --surface-2: #f0eff4;
+      --border: rgba(0,0,0,0.06);
+      --border-strong: rgba(0,0,0,0.10);
+      --radius: 14px;
+      --radius-sm: 8px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--surface);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Header */
+    .header {
+      background: var(--ink);
+      padding: 48px 24px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 30% 50%, rgba(198,241,53,0.06) 0%, transparent 50%),
+                  radial-gradient(circle at 70% 50%, rgba(198,241,53,0.04) 0%, transparent 40%);
+      pointer-events: none;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+ 
+
+    .brand-name {
+      font-weight: 800;
+      font-size: 22px;
+      color: #fff;
+      letter-spacing: -0.3px;
+    }
+
+    .header h1 {
+      font-size: 32px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header .subtitle {
+      color: rgba(255,255,255,0.5);
+      font-size: 14px;
+      margin-top: 8px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header .accent-line {
+      width: 40px;
+      height: 3px;
+      background: var(--lime);
+      border-radius: 2px;
+      margin: 20px auto 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Content */
+    .content {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: var(--lime-dim);
+      border: 1px solid var(--lime-border);
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      letter-spacing: -0.2px;
+    }
+
+    h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink-2);
+      margin: 20px 0 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    p {
+      color: var(--text-secondary);
+      margin-bottom: 14px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 14px;
+    }
+
+    ul li {
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 8px;
+      color: var(--text-secondary);
+    }
+
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      background: var(--lime);
+      border-radius: 50%;
+    }
+
+    /* Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 20px;
+      font-size: 14px;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      font-weight: 600;
+      color: var(--ink);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      background: var(--surface-2);
+    }
+
+    td {
+      color: var(--text-secondary);
+    }
+
+    tr:hover td {
+      background: var(--lime-dim);
+    }
+
+    /* Highlight box */
+    .highlight {
+      background: var(--lime-dim);
+      border: 1px solid var(--lime-border);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      margin: 16px 0;
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .highlight strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid var(--border-strong);
+      padding: 32px 24px;
+      text-align: center;
+      background: var(--surface-2);
+    }
+
+    .footer-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .footer-brand .mark {
+      width: 24px;
+      height: 24px;
+      background: var(--lime);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 11px;
+      color: var(--ink);
+    }
+
+    .footer-brand .name {
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--ink);
+    }
+
+    .footer p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .footer a {
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid var(--lime);
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      .header { padding: 36px 20px 32px; }
+      .header h1 { font-size: 26px; }
+      .content { padding: 28px 20px 60px; }
+      h2 { font-size: 16px; }
+      table { font-size: 13px; }
+      th, td { padding: 8px 10px; }
+    }
+  </style>
+<base target="_blank">
+</head>
+<body>
+
+  <header class="header">
+    <div class="brand">
+      <span class="brand-name">Piwi</span>
+    </div>
+    <h1>Terms of Service</h1>
+    <p class="subtitle">Last updated: July 8, 2026</p>
+    <div class="accent-line"></div>
+  </header>
+
+  <main class="content">
+
+    <div class="section">
+      <h2><span class="section-number">1</span>Acceptance of Terms</h2>
+      <p>By downloading, installing, or using the Piwi mobile application (the "App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, you must not use the App.</p>
+      <p>These Terms constitute a legally binding agreement between you and Piwi. By creating an account or using any feature of the App, you acknowledge that you have read, understood, and agree to be bound by these Terms and our <a href="privacy.html">Privacy Policy</a>.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="section-number">2</span>Eligibility</h2>
+      <p>You must be at least <strong>13 years of age</strong> to use the App. By using the App, you represent and warrant that:</p>
+      <ul>
+        <li>You are at least 13 years old;</li>
+        <li>You are not located in a country subject to a U.S. government embargo or designated as a "terrorist-supporting" country;</li>
+        <li>You are not listed on any U.S. government list of prohibited or restricted parties;</li>
+        <li>You have the legal capacity to enter into a binding contract.</li>
+      </ul>
+      <p>If you are between 13 and 18 years old, you must have permission from a parent or guardian to use the App.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="section-number">3</span>Account Registration</h2>
+      <h3>Creating an Account</h3>
+      <p>To access certain features, you must register for an account. You may register using:</p>
+      <ul>
+        <li>Email and password; or</li>
+        <li>Google OAuth sign-in.</li>
+      </ul>
+      <p>When registering, you agree to provide accurate, current, and complete information, including your first name, last name, governorate (region), and gender.</p>
+
+      <h3>Account Security</h3>
+      <p>You are responsible for maintaining the confidentiality of your account credentials and for all activities under your account. You agree to:</p>
+      <ul>
+        <li>Choose a strong password;</li>
+        <li>Not share your account with anyone;</li>
+        <li>Notify us immediately at <a href="mailto:piwi.support@gmail.com">piwi.support@gmail.com</a> if you suspect unauthorized access;</li>
+        <li>Not create accounts by automated means or bots.</li>
+      </ul>
+
+      <h3>One Account Per User</h3>
+      <p>You may maintain only one active account unless explicitly authorized by us. We reserve the right to suspend or terminate duplicate accounts.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="section-number">4</span>License to Use</h2>
+      <p>Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, non-sublicensable, revocable license to download, install, and use the App on your personal mobile device solely for your personal, non-commercial use.</p>
+
+      <h3>License Restrictions</h3>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Copy, modify, or create derivative works of the App;</li>
+        <li>Reverse engineer, decompile, or disassemble the App;</li>
+        <li>Rent, lease, lend, sell, sublicense, or distribute the App;</li>
+        <li>Remove any copyright, trademark, or proprietary notices;</li>
+        <li>Use the App for any illegal or unauthorized purpose;</li>
+        <li>Interfere with or disrupt the App or its servers;</li>
+        <li>Attempt to gain unauthorized access to any part of the App;</li>
+        <li>Use automated scripts, bots, or scrapers to access the App;</li>
+        <li>Upload viruses, malware, or other harmful code;</li>
+        <li>Impersonate another person or misrepresent your identity;</li>
+        <li>Harass, abuse, or harm other users;</li>
+        <li>Post false, misleading, or fraudulent result claims.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="section-number">5</span>User-Generated Content</h2>
+      <h3>Content You Submit</h3>
+      <p>The App allows you to submit content, including:</p>
+      <ul>
+        <li>Profile information (name, governorate, gender, date of birth);</li>
+        <li>Race result claims with finish times and evidence photos;</li>
+        <li>Wishlist entries;</li>
+        <li>Follow relationships.</li>
+      </ul>
+
+      <h3>Content Standards</h3>
+      <p>You represent and warrant that any content you submit:</p>
+      <ul>
+        <li>Is accurate and truthful;</li>
+        <li>Does not infringe on any third party's intellectual property rights;</li>
+        <li>Does not violate any applicable law;</li>
+        <li>Does not contain defamatory, obscene, or offensive material;</li>
+        <li>Evidence photos must be your own and accurately reflect your race participation.</li>
+      </ul>
+
+      <h3>Result Claims</h3>
+      <p>When you submit a race result claim:</p>
+      <ul>
+        <li>You must provide accurate finish times;</li>
+        <li>Evidence photos must be genuine and unaltered;</li>
+        <li>We reserve the right to verify claims and reject fraudulent submissions;</li>
+        <li>Approved claims become part of public leaderboards.</li>
+      </ul>
+
+      <h3>Content License to Us</h3>
+      <p>By submitting content to the App, you grant us a non-exclusive, royalty-free, worldwide license to use, display, and distribute your content solely for the purpose of operating and improving the App. This license terminates when you delete your account or the relevant content.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="section-number">6</span>Leaderboards and Public Data</h2>
+      <h3>Public Leaderboards</h3>
+      <p>Race results and rankings displayed on public leaderboards are visible to all App users. By submitting an approved result claim, you acknowledge that your name, finish time, gender category, age category (derived from date of birth), and governorate will be publicly displayed.</p>
+
+      <h3>Opting Out of Leaderboards</h3>
+      <div class="highlight">
+        You may hide your profile from public leaderboards at any time by toggling <strong>"Hide on Leaderboard"</strong> in your Settings. When enabled, your name will not appear on public leaderboards, but your results may still be counted in aggregate statistics.
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><span class="section-number">7</span>Intellectual Property</h2>
+      <p>The App, including all software, code, designs, graphics, logos, trademarks, and content (excluding user-generated content), is owned by us or our licensors and is protected by copyright, trademark, and other intellectual property laws.</p>
+      <p>These Terms do not grant you any ownership rights in the App or its content. All rights not expressly granted are reserved by us.</p>
+      <p>If you provide feedback, suggestions, or ideas about the App, you grant us a perpetual, irrevocable, royalty-free license to use that feedback for any purpose without compensation or attribution.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="section-number">8</span>Third-Party Services</h2>
+      <p>The App integrates with third-party services:</p>
+      <table>
+        <tr>
+          <th>Service</th>
+          <th>Purpose</th>
+        </tr>
+        <tr>
+          <td>Supabase</td>
+          <td>Database, authentication, and file storage</td>
+        </tr>
+        <tr>
+          <td>PostHog</td>
+          <td>Anonymous analytics (EU-hosted)</td>
+        </tr>
+        <tr>
+          <td>Google</td>
+          <td>OAuth sign-in</td>
+        </tr>
+      </table>
+      <p>Your use of these third-party services is subject to their respective terms and privacy policies. We are not responsible for the practices of these third parties.</p>
+      <p>The App may contain links to external websites or resources (e.g., race registration pages, organizer websites). We are not responsible for the content, accuracy, or availability of these external resources.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="section-number">9</span>Termination</h2>
+      <h3>Termination by You</h3>
+      <p>You may terminate your account at any time by using the <strong>"Delete Account"</strong> feature in the App's Settings or by contacting us at <a href="mailto:piwi.support@gmail.com">piwi.support@gmail.com</a>. Upon termination:</p>
+      <ul>
+        <li>Your account will be soft-deleted immediately;</li>
+        <li>Your personal data will be permanently erased within 30 days;</li>
+        <li>Your published results on public leaderboards may be retained in anonymized form.</li>
+      </ul>
+
+      <h3>Termination by Us</h3>
+      <p>We reserve the right to suspend or terminate your account, with or without notice, if we believe you have:</p>
+      <ul>
+        <li>Violated these Terms;</li>
+        <li>Provided false or misleading information;</li>
+        <li>Submitted fraudulent result claims;</li>
+        <li>Engaged in harassment or abuse of other users;</li>
+        <li>Violated any applicable law.</li>
+      </ul>
+
+      <h3>Effect of Termination</h3>
+      <p>Upon termination, your license to use the App ends immediately. You must cease all use of the App and delete all copies from your devices. Termination does not affect any provisions that by their nature should survive termination.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="section-number">10</span>Disclaimers</h2>
+      <p><strong>THE APP IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.</strong></p>
+
+      <p>While we strive to provide accurate race information, results, and rankings, we do not guarantee:</p>
+      <ul>
+        <li>The accuracy, completeness, or timeliness of race data;</li>
+        <li>The accuracy of user-submitted result claims;</li>
+        <li>The availability or reliability of the App at all times;</li>
+        <li>That the App will meet your specific requirements.</li>
+      </ul>
+
+      <h3>Race Information</h3>
+      <p>Race dates, locations, distances, and registration information are provided by race organizers or sourced publicly. We are not responsible for changes, cancellations, or errors in race information. Always verify details directly with the race organizer.</p>
+
+      <h3>Health and Safety</h3>
+      <p>Piwi is a race discovery and results platform, not a medical or fitness advisor. Consult a healthcare professional before participating in endurance sports. We are not responsible for any injuries or health issues resulting from race participation.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="section-number">11</span>Limitation of Liability</h2>
+      <p><strong>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL PIWI, ITS DEVELOPER, OR ITS AFFILIATES BE LIABLE FOR:</strong></p>
+      <ul>
+        <li>Any indirect, incidental, special, consequential, or punitive damages;</li>
+        <li>Any loss of profits, revenue, data, or goodwill;</li>
+        <li>Any damages arising from your use of or inability to use the App;</li>
+        <li>Any damages arising from third-party content or services.</li>
+      </ul>
+      <p><strong>Our total liability to you for all claims arising out of or relating to these Terms or the App shall not exceed the amount you have paid to us for the App in the past twelve (12) months. If you have not paid anything, our liability is capped at zero.</strong></p>
+      <p>The above limitations do not apply to: death or personal injury caused by our negligence; fraud or fraudulent misrepresentation; or any liability that cannot be excluded under applicable law.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="section-number">12</span>Indemnification</h2>
+      <p>You agree to indemnify, defend, and hold harmless Piwi, its developer, and affiliates from and against any claims, liabilities, damages, losses, and expenses (including reasonable legal fees) arising out of or in any way connected with:</p>
+      <ul>
+        <li>Your access to or use of the App;</li>
+        <li>Your violation of these Terms;</li>
+        <li>Your violation of any third-party right;</li>
+        <li>Any content you submit to the App.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="section-number">13</span>Governing Law and Disputes</h2>
+      <p>These Terms shall be governed by and construed in accordance with the laws of <strong>Tunisia</strong>, without regard to its conflict of law provisions.</p>
+      <p>Any dispute arising out of or relating to these Terms or the App shall first be attempted to be resolved through good-faith negotiation. If negotiation fails, disputes shall be resolved through binding arbitration in Tunis, Tunisia, in accordance with the rules of the Tunisian Arbitration Code.</p>
+      <p>You agree that any proceedings will be conducted only on an individual basis and not in a class, consolidated, or representative action.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="section-number">14</span>Changes to These Terms</h2>
+      <p>We reserve the right to modify these Terms at any time. We will notify you of material changes by:</p>
+      <ul>
+        <li>Updating the "Last updated" date at the top of these Terms;</li>
+        <li>Displaying a notice within the App;</li>
+        <li>Sending an email to the address associated with your account.</li>
+      </ul>
+      <p>Your continued use of the App after any changes constitutes acceptance of the revised Terms. If you do not agree to the changes, you must stop using the App and delete your account.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="section-number">15</span>Severability</h2>
+      <p>If any provision of these Terms is found to be invalid, illegal, or unenforceable by a court of competent jurisdiction, that provision shall be modified to the minimum extent necessary to make it enforceable, and the remaining provisions shall remain in full force and effect.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="section-number">16</span>Entire Agreement</h2>
+      <p>These Terms, together with our <a href="privacy.html">Privacy Policy</a>, constitute the entire agreement between you and Piwi regarding the App and supersede all prior agreements, understandings, and communications, whether written or oral.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="section-number">17</span>Waiver</h2>
+      <p>Our failure to enforce any right or provision of these Terms shall not constitute a waiver of that right or provision. Any waiver must be in writing and signed by an authorized representative of Piwi.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="section-number">18</span>Contact Information</h2>
+      <p>If you have any questions, concerns, or feedback about these Terms, please contact us:</p>
+      <div class="highlight">
+        <strong>Email:</strong> <a href="mailto:piwi.support@gmail.com">piwi.support@gmail.com</a><br>
+        <strong>Response time:</strong> We aim to respond within 48 hours.
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><span class="section-number">19</span>App Store Terms</h2>
+      <h3>Google Play</h3>
+      <p>If you downloaded the App from Google Play, you also agree to the Google Play Terms of Service. In the event of any conflict between these Terms and the Google Play Terms of Service, the Google Play Terms of Service shall prevail only to the extent of the conflict.</p>
+
+      <h3>Apple App Store</h3>
+      <p>If you downloaded the App from the Apple App Store, you also agree to the Apple Media Services Terms and Conditions. These Terms are between you and Piwi only, not with Apple. Apple is not responsible for the App or its content.</p>
+    </div>
+
+    <div class="section" style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border-strong);">
+      <p style="font-size: 13px; color: var(--text-muted); text-align: center;">
+        These Terms of Service are effective as of <strong>July 8, 2026</strong>.
+      </p>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <span class="name">Piwi</span>
+    </div>
+    <p>Built for endurance athletes in Tunisia and North Africa.</p>
+    <p style="margin-top: 4px;">Questions? <a href="mailto:piwi.support@gmail.com">piwi.support@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>

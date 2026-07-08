@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Piwi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0a060e;
+      --ink-2: #161318;
+      --ink-3: #242228;
+      --text: #1a1520;
+      --text-secondary: rgba(10,6,14,0.65);
+      --text-muted: rgba(10,6,14,0.45);
+      --lime: #C6F135;
+      --lime-dim: rgba(198, 241, 53, 0.12);
+      --lime-border: rgba(198, 241, 53, 0.25);
+      --surface: #f8f7fa;
+      --surface-2: #f0eff4;
+      --border: rgba(0,0,0,0.06);
+      --border-strong: rgba(0,0,0,0.10);
+      --radius: 14px;
+      --radius-sm: 8px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--surface);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Header */
+    .header {
+      background: var(--ink);
+      padding: 48px 24px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 30% 50%, rgba(198,241,53,0.06) 0%, transparent 50%),
+                  radial-gradient(circle at 70% 50%, rgba(198,241,53,0.04) 0%, transparent 40%);
+      pointer-events: none;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .brand-name {
+      font-weight: 800;
+      font-size: 22px;
+      color: #fff;
+      letter-spacing: -0.3px;
+    }
+
+    .header h1 {
+      font-size: 32px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header .subtitle {
+      color: rgba(255,255,255,0.5);
+      font-size: 14px;
+      margin-top: 8px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header .accent-line {
+      width: 40px;
+      height: 3px;
+      background: var(--lime);
+      border-radius: 2px;
+      margin: 20px auto 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Content */
+    .content {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: var(--lime-dim);
+      border: 1px solid var(--lime-border);
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      letter-spacing: -0.2px;
+    }
+
+    h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink-2);
+      margin: 20px 0 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    p {
+      color: var(--text-secondary);
+      margin-bottom: 14px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 14px;
+    }
+
+    ul li {
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 8px;
+      color: var(--text-secondary);
+    }
+
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      background: var(--lime);
+      border-radius: 50%;
+    }
+
+    /* Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 20px;
+      font-size: 14px;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      font-weight: 600;
+      color: var(--ink);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      background: var(--surface-2);
+    }
+
+    td {
+      color: var(--text-secondary);
+    }
+
+    tr:hover td {
+      background: var(--lime-dim);
+    }
+
+    /* Highlight box */
+    .highlight {
+      background: var(--lime-dim);
+      border: 1px solid var(--lime-border);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      margin: 16px 0;
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .highlight strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    /* Check/X icons */
+    .check-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 14px;
+    }
+
+    .check-list li {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 8px;
+      color: var(--text-secondary);
+    }
+
+    .check-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 16px;
+      height: 16px;
+      background: var(--lime-dim);
+      border: 1px solid var(--lime-border);
+      border-radius: 4px;
+    }
+
+    .check-list li::after {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 11px;
+      width: 5px;
+      height: 8px;
+      border: solid var(--ink);
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+
+    .x-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 14px;
+    }
+
+    .x-list li {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 8px;
+      color: var(--text-secondary);
+    }
+
+    .x-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 16px;
+      height: 16px;
+      background: rgba(224, 58, 58, 0.08);
+      border: 1px solid rgba(224, 58, 58, 0.2);
+      border-radius: 4px;
+    }
+
+    .x-list li::after {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 11px;
+      width: 5px;
+      height: 8px;
+      border: solid #D32F2F;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid var(--border-strong);
+      padding: 32px 24px;
+      text-align: center;
+      background: var(--surface-2);
+    }
+
+    .footer-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .footer-brand .name {
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--ink);
+    }
+
+    .footer p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .footer a {
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid var(--lime);
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      .header { padding: 36px 20px 32px; }
+      .header h1 { font-size: 26px; }
+      .content { padding: 28px 20px 60px; }
+      h2 { font-size: 16px; }
+      table { font-size: 13px; }
+      th, td { padding: 8px 10px; }
+    }
+  </style>
+<base target="_blank">
+</head>
+<body>
+
+  <header class="header">
+    <div class="brand">
+      <span class="brand-name">Piwi</span>
+    </div>
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">Last updated: July 8, 2026</p>
+    <div class="accent-line"></div>
+  </header>
+
+  <main class="content">
+
+    <div class="section">
+      <h2><span class="section-number">1</span>Introduction</h2>
+      <p>Piwi ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, store, and protect your personal information when you use the Piwi mobile application (the "App").</p>
+      <p>By using Piwi, you agree to the collection and use of information in accordance with this policy. If you do not agree with this policy, please do not use the App.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="section-number">2</span>Information We Collect</h2>
+
+      <h3>Information You Provide Directly</h3>
+      <p>When you create an account or use certain features, we collect:</p>
+      <table>
+        <tr>
+          <th>Data</th>
+          <th>Required?</th>
+          <th>Purpose</th>
+        </tr>
+        <tr>
+          <td>Email address</td>
+          <td>Yes</td>
+          <td>Account authentication and communication</td>
+        </tr>
+        <tr>
+          <td>Password</td>
+          <td>Yes</td>
+          <td>Account security (stored hashed by Supabase)</td>
+        </tr>
+        <tr>
+          <td>First name</td>
+          <td>Yes</td>
+          <td>Display on your public profile and leaderboard</td>
+        </tr>
+        <tr>
+          <td>Last name</td>
+          <td>Yes</td>
+          <td>Display on your public profile</td>
+        </tr>
+        <tr>
+          <td>Governorate (region)</td>
+          <td>Yes</td>
+          <td>Race discovery and leaderboard filtering</td>
+        </tr>
+        <tr>
+          <td>Gender</td>
+          <td>Yes</td>
+          <td>Leaderboard categorization (male or female)</td>
+        </tr>
+        <tr>
+          <td>Date of birth</td>
+          <td>No</td>
+          <td>Age category calculation for leaderboards</td>
+        </tr>
+        <tr>
+          <td>Race finish times</td>
+          <td>No</td>
+          <td>Personal records and leaderboard rankings</td>
+        </tr>
+        <tr>
+          <td>Race photos (evidence)</td>
+          <td>No</td>
+          <td>Result verification (1-3 images per claim)</td>
+        </tr>
+        <tr>
+          <td>Bib number</td>
+          <td>No</td>
+          <td>Result verification (optional)</td>
+        </tr>
+      </table>
+
+      <h3>Information Collected Automatically</h3>
+      <p>When you use the App, we automatically collect:</p>
+      <table>
+        <tr>
+          <th>Data</th>
+          <th>Purpose</th>
+        </tr>
+        <tr>
+          <td>App version</td>
+          <td>Compatibility and debugging</td>
+        </tr>
+        <tr>
+          <td>Operating system (iOS/Android)</td>
+          <td>Compatibility and analytics</td>
+        </tr>
+        <tr>
+          <td>OS version</td>
+          <td>Compatibility and analytics</td>
+        </tr>
+        <tr>
+          <td>Screen views and interactions</td>
+          <td>Product improvement and analytics</td>
+        </tr>
+        <tr>
+          <td>Search queries</td>
+          <td>Product improvement (no personal identifiers attached)</td>
+        </tr>
+        <tr>
+          <td>Device identifier</td>
+          <td>Analytics and fraud prevention</td>
+        </tr>
+      </table>
+
+      <h3>Information from Third Parties</h3>
+      <p>If you sign in with Google, we receive:</p>
+      <ul>
+        <li>Your name</li>
+        <li>Your email address</li>
+        <li>Your profile picture (optional)</li>
+      </ul>
+      <p>We use this information only to pre-fill your profile and authenticate you. We do not access any other Google data.</p>
+
+      <h3>What We Do NOT Collect</h3>
+      <p>We explicitly do not collect:</p>
+      <ul class="x-list">
+        <li>GPS location or precise geolocation</li>
+        <li>Phone contacts or address book</li>
+        <li>Phone number</li>
+        <li>Camera access (we use the system photo picker only)</li>
+        <li>Microphone access</li>
+        <li>Push notification tokens</li>
+        <li>Health data beyond race finish times</li>
+        <li>Financial or payment information</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="section-number">3</span>How We Use Your Information</h2>
+      <p>We use your information for the following purposes:</p>
+      <table>
+        <tr>
+          <th>Purpose</th>
+          <th>Data Used</th>
+        </tr>
+        <tr>
+          <td>Account creation and authentication</td>
+          <td>Email, password, Google OAuth data</td>
+        </tr>
+        <tr>
+          <td>Race discovery and recommendations</td>
+          <td>Governorate, sport preferences</td>
+        </tr>
+        <tr>
+          <td>Leaderboard display</td>
+          <td>Name, finish times, gender, age category, governorate</td>
+        </tr>
+        <tr>
+          <td>Result verification</td>
+          <td>Evidence photos, bib numbers, finish times</td>
+        </tr>
+        <tr>
+          <td>Social features</td>
+          <td>Follow relationships, wishlisted races</td>
+        </tr>
+        <tr>
+          <td>App improvement</td>
+          <td>Anonymous analytics, screen views, search patterns</td>
+        </tr>
+        <tr>
+          <td>Customer support</td>
+          <td>Email, account information</td>
+        </tr>
+        <tr>
+          <td>Security and fraud prevention</td>
+          <td>Device info, account activity</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2><span class="section-number">4</span>Legal Basis for Processing (GDPR)</h2>
+      <p>If you are in the European Economic Area (EEA), we process your personal data based on:</p>
+      <ul>
+        <li><strong>Contractual necessity:</strong> To provide the App's core features (account, race discovery, leaderboards)</li>
+        <li><strong>Legitimate interests:</strong> Analytics, fraud prevention, and app improvement</li>
+        <li><strong>Consent:</strong> For optional features like result claims with photo evidence</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="section-number">5</span>Data Sharing and Third Parties</h2>
+      <p>We do not sell your personal data. We share data only with the following service providers:</p>
+      <table>
+        <tr>
+          <th>Service Provider</th>
+          <th>Data Shared</th>
+          <th>Purpose</th>
+          <th>Location</th>
+        </tr>
+        <tr>
+          <td>Supabase</td>
+          <td>All user data</td>
+          <td>Database, authentication, file storage</td>
+          <td>Cloud (check your Supabase project region)</td>
+        </tr>
+        <tr>
+          <td>PostHog</td>
+          <td>Anonymous analytics events, device info</td>
+          <td>Product analytics and improvement</td>
+          <td>European Union (eu.i.posthog.com)</td>
+        </tr>
+        <tr>
+          <td>Google</td>
+          <td>Name, email, picture (sign-in only)</td>
+          <td>OAuth authentication</td>
+          <td>United States</td>
+        </tr>
+        <tr>
+          <td>Expo</td>
+          <td>Build metadata</td>
+          <td>App distribution and updates</td>
+          <td>United States</td>
+        </tr>
+      </table>
+      <p>All third parties are contractually bound to use your data only for the purposes described above and to protect it in accordance with applicable laws.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="section-number">6</span>Data Security</h2>
+      <p>We implement appropriate technical and organizational measures to protect your data:</p>
+      <ul class="check-list">
+        <li><strong>Encryption in transit:</strong> All data transmitted between the App and our servers uses HTTPS/TLS encryption.</li>
+        <li><strong>Password hashing:</strong> Passwords are hashed using industry-standard algorithms by Supabase Auth.</li>
+        <li><strong>Row-level security:</strong> Database access is restricted so users can only access their own data.</li>
+        <li><strong>Image compression:</strong> Evidence photos are resized to 1200px width and compressed to 80% quality before storage.</li>
+        <li><strong>No plaintext storage:</strong> Sensitive data is never stored in plain text.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="section-number">7</span>Data Retention</h2>
+      <p>We retain your data for as long as your account is active or as needed to provide you with the App's services.</p>
+      <table>
+        <tr>
+          <th>Data Type</th>
+          <th>Retention Period</th>
+        </tr>
+        <tr>
+          <td>Account and profile data</td>
+          <td>Until account deletion</td>
+        </tr>
+        <tr>
+          <td>Race results and claims</td>
+          <td>Until account deletion (or as required by race organizers)</td>
+        </tr>
+        <tr>
+          <td>Evidence photos</td>
+          <td>Until the associated result claim is deleted</td>
+        </tr>
+        <tr>
+          <td>Analytics data</td>
+          <td>12 months (PostHog default retention)</td>
+        </tr>
+        <tr>
+          <td>Deleted accounts</td>
+          <td>30 days after soft deletion, then permanently erased</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2><span class="section-number">8</span>Your Rights</h2>
+      <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+      <table>
+        <tr>
+          <th>Right</th>
+          <th>How to Exercise</th>
+        </tr>
+        <tr>
+          <td>Access</td>
+          <td>Contact <a href="mailto:piwi.support@gmail.com">piwi.support@gmail.com</a></td>
+        </tr>
+        <tr>
+          <td>Correction</td>
+          <td>Update your profile in the App's Settings</td>
+        </tr>
+        <tr>
+          <td>Deletion ("Right to be Forgotten")</td>
+          <td>Use the "Delete Account" button in Settings</td>
+        </tr>
+        <tr>
+          <td>Restriction of processing</td>
+          <td>Contact <a href="mailto:piwi.support@gmail.com">piwi.support@gmail.com</a></td>
+        </tr>
+        <tr>
+          <td>Data portability</td>
+          <td>Contact <a href="mailto:piwi.support@gmail.com">piwi.support@gmail.com</a></td>
+        </tr>
+        <tr>
+          <td>Object to processing</td>
+          <td>Contact <a href="mailto:piwi.support@gmail.com">piwi.support@gmail.com</a></td>
+        </tr>
+        <tr>
+          <td>Withdraw consent</td>
+          <td>Contact <a href="mailto:piwi.support@gmail.com">piwi.support@gmail.com</a></td>
+        </tr>
+      </table>
+
+      <h3>Account Deletion</h3>
+      <div class="highlight">
+        You can delete your account at any time:<br>
+        <strong>1.</strong> Go to <strong>Settings → Delete Account</strong><br>
+        <strong>2.</strong> Confirm the deletion<br>
+        <strong>3.</strong> Your account will be soft-deleted immediately and permanently erased within 30 days
+      </div>
+      <p>When you delete your account:</p>
+      <ul>
+        <li>Your profile and personal data are marked for deletion</li>
+        <li>Your result claims and evidence photos are removed</li>
+        <li>Your auth credentials are invalidated</li>
+        <li>Your wishlist and follow relationships are deleted</li>
+      </ul>
+      <p><strong>Note:</strong> Anonymized race results that have been published to public leaderboards may be retained in aggregated form.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="section-number">9</span>Children's Privacy</h2>
+      <p>Piwi is not intended for children under the age of 13. We do not knowingly collect personal data from children under 13. If you believe we have collected data from a child under 13, please contact us at <a href="mailto:piwi.support@gmail.com">piwi.support@gmail.com</a> and we will delete the information promptly.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="section-number">10</span>International Data Transfers</h2>
+      <p>Your data is primarily stored and processed in the region where your Supabase project is hosted. Analytics data is processed in the European Union (via PostHog's EU infrastructure).</p>
+      <p>If you are located outside these regions, your data may be transferred to and processed in these locations. We ensure appropriate safeguards are in place for such transfers.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="section-number">11</span>Changes to This Privacy Policy</h2>
+      <p>We may update this Privacy Policy from time to time. We will notify you of changes by:</p>
+      <ul>
+        <li>Updating the "Last updated" date at the top of this policy</li>
+        <li>Displaying a notice in the App when significant changes are made</li>
+      </ul>
+      <p>Your continued use of the App after any changes constitutes acceptance of the updated policy.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="section-number">12</span>Contact Us</h2>
+      <div class="highlight">
+        <strong>Email:</strong> <a href="mailto:piwi.support@gmail.com">piwi.support@gmail.com</a><br>
+        <strong>Response time:</strong> We aim to respond to all inquiries within 48 hours.
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><span class="section-number">13</span>Google Play Data Safety Disclosure</h2>
+      <p>For transparency with Google Play users, here is our Data Safety summary:</p>
+
+      <h3>Data Collected</h3>
+      <table>
+        <tr>
+          <th>Data Type</th>
+          <th>Optional?</th>
+          <th>Purpose</th>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>No</td>
+          <td>Account, leaderboard</td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td>No</td>
+          <td>Authentication</td>
+        </tr>
+        <tr>
+          <td>Photos</td>
+          <td>Yes</td>
+          <td>Result verification</td>
+        </tr>
+        <tr>
+          <td>App interactions</td>
+          <td>No</td>
+          <td>Analytics</td>
+        </tr>
+        <tr>
+          <td>Device ID</td>
+          <td>No</td>
+          <td>Analytics, security</td>
+        </tr>
+        <tr>
+          <td>OS version</td>
+          <td>No</td>
+          <td>Analytics, compatibility</td>
+        </tr>
+        <tr>
+          <td>Search history</td>
+          <td>No</td>
+          <td>Product improvement</td>
+        </tr>
+      </table>
+
+      <h3>Data Shared</h3>
+      <p>We do not share personal data with third parties except for the service providers listed in Section 5, who process data on our behalf.</p>
+
+      <h3>Security Practices</h3>
+      <ul class="check-list">
+        <li>Data is encrypted in transit</li>
+        <li>You can request that data be deleted</li>
+        <li>Account deletion is available in-app</li>
+        <li>No data is sold to third parties</li>
+      </ul>
+    </div>
+
+    <div class="section" style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border-strong);">
+      <p style="font-size: 13px; color: var(--text-muted); text-align: center;">
+        This Privacy Policy is effective as of <strong>July 8, 2026</strong>.
+      </p>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <span class="name">Piwi</span>
+    </div>
+    <p>Built for endurance athletes in Tunisia and North Africa.</p>
+    <p style="margin-top: 4px;">Questions? <a href="mailto:piwi.support@gmail.com">piwi.support@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>
